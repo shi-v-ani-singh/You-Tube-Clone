@@ -8,7 +8,7 @@ const ButtonList = () => {
 
             {
                 buttonList.map((items, index) => {
-                    console.log(items)
+
                     return(
                         <button key={index} className='border font-medium rounded-md px-4 py-1  hover:bg-gray-200 bg-gray-100 cursor-pointer'>{items}</button>
                     )

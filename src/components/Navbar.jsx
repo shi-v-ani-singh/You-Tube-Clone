@@ -1,7 +1,8 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
+// import { CgProfile } from "react-icons/cg";
+import Avatar from "react-avatar";
 import { CiSearch } from "react-icons/ci";
 import { FaMicrophone } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -46,7 +47,8 @@ const Navbar = () => {
                         <IoMdNotificationsOutline size={'24px'} />
                     </div>
                     <div className='hover:rounded-full hover:bg-gray-100 cursor-pointer p-3'>
-                        <CgProfile size={'24px'} />
+                        {/* <CgProfile size={'24px'} /> */}
+                        <Avatar size="24" round={true} />
                     </div>
                 </div>
 
