@@ -36,25 +36,41 @@ const Watch = () => {
 
   }
 
-  const getSingleVideo = async () => {
-    try {
-      const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`);
-      const videoData = res?.data?.items[0];
-      setSingleVideo(videoData);
-      if (videoData) {
-        getChannelDetails(videoData?.snippet?.channelId);
+  // const getSingleVideo = async () => {
+  //   try {
+  //     const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`);
+  //     const videoData = res?.data?.items[0];
+  //     setSingleVideo(videoData);
+  //     if (videoData) {
+  //       getChannelDetails(videoData?.snippet?.channelId);
+  //     }
+  //   }
+  //   catch (error) {
+
+  //     console.log(error);
+  //   }
+  // }
+  useEffect(() => {
+    const getSingleVideo = async () => {
+      try {
+        const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`);
+        const videoData = res?.data?.items[0];
+        setSingleVideo(videoData);
+        if (videoData) {
+          getChannelDetails(videoData?.snippet?.channelId);
+        }
+      } catch (error) {
+        console.log(error);
       }
-    }
-    catch (error) {
-
-      console.log(error);
-    }
-  }
-
-  useEffect(
-    () => {
-      getSingleVideo();
-    }, []);
+    };
+  
+    getSingleVideo();
+  }, [videoId]);
+  
+  // useEffect(
+  //   () => {
+  //     getSingleVideo();
+  //   }, []);
 
   console.log(singleVideo);
 
