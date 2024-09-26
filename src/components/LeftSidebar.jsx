@@ -52,30 +52,32 @@ const sidebarItems = [
     icons: <MdOutlineSubscriptions size={'24px'} />,
     title: 'Subscription'
   },
- 
+
 
 ]
 
 
 const LeftSidebar = () => {
-  const open = useSelector((store)=>store.app.open);
+  const open = useSelector((store) => store.app.open);
 
   return (
-    <div className={`flex flex-col items-start ml-1 gap-1 relative left-0 p-3 h-[calc(100vh-4.625rem)] mt-4 pt-0.5 overflow-y-scroll overflow-x-hidden ${open?"w-[20%]":"w[8%"}`}>
+    <div className={`
+      flex flex-col items-start ml-1 gap-1 relative left-0 p-3 h-[calc(100vh-4.625rem)] mt-4 pt-0.5 overflow-y-scroll overflow-x-hidden ${open?"w-[20%]":"w[8%]"}
+    `}>
       {
-        sidebarItems.map((item, index)=>{
+        sidebarItems.map((item, index) => {
 
-        
-          return(
-            <div key={index} className={`flex  ${open?"flex-row":"flex-col"} items-center gap-2 cursor-pointer hover:bg-gray-100 p-4 w-full hover:rounded-md`}>
-            {item.icons}
-            <p className={`${open ? "" : 'hidden'}`}>{item.title}</p>
-          </div>
+
+          return (
+            <div key={index} className={`flex  ${open ? "flex-row" : "flex-col"} items-center gap-2 cursor-pointer hover:bg-gray-100 p-4 w-full hover:rounded-md`}>
+              {item.icons}
+              <p className={`${open ? "" : 'hidden'}`}>{item.title}</p>
+            </div>
           )
         })
       }
     </div>
-   
+
   )
 }
 export default LeftSidebar

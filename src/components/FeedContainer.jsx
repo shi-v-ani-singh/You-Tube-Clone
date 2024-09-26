@@ -6,10 +6,10 @@ import ButtonList from './ButtonList'
 
 const FeedContainer = () => {
   return (
-    <div className='ml-10 mt-6 mr-10 w-[80%]'>
+    <div className='ml-10  h-[calc(100vh-4.625rem)] overflow-auto mt-2.5 mr-10 w-[85%]'>
         <ButtonList/>
 
-        <Videos/>
+        <Videos />
     </div>
   )
 }

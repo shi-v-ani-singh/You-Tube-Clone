@@ -1,10 +1,10 @@
 import React from 'react'
 
-const buttonList = ['All', 'Javascript', 'Java', 'Live', 'Songs', 'Movies', 'Blogs', 'Trending', 'Gaming', 'Programming']
+const buttonList = ['All', 'Javascript', 'Java','Programming','Java', 'Live', 'Songs', 'Movies', 'Blogs', 'Trending', 'Gaming','Movies']
 
 const ButtonList = () => {
     return (
-        <div className='flex gap-4'>
+        <div className='flex fixed bg-slate-50 gap-4 pb-5'>
 
             {
                 buttonList.map((items, index) => {

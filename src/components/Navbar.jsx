@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='flex fixed  justify-center top-0  items-center w-[100%] z-10 mt-[-1rem] pt-4  bg-white mb-4  shadow'>
+        <div className='flex fixed  justify-center top-0  items-center w-[100%] z-10 mt-[-1rem] pt-4  bg-white mb-4'>
             <div className='flex justify-between py-3 w-[95%] items-center'>
                 <div className='flex gap-5 ml-3 items-center w-[30%]'>
                     <div className='hover:rounded-full hover:bg-gray-100  cursor-pointer p-3'>
