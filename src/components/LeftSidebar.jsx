@@ -8,8 +8,8 @@ import { useSelector } from 'react-redux';
 
 const sidebarItems = [
   {
-    icons: <GoHome size={'24px'} />,
-    title: 'Home'
+    icons: <GoHome size={'24px'}  />,
+    title: 'Home',
   },
   {
     icons: <SiYoutubeshorts size={'24px'} />,

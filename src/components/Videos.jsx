@@ -22,7 +22,7 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className='grid grid-cols-3 gap-4 mt-12  h-screen overflow-auto hide-scrollbar
+    <div className='grid grid-cols-3 gap-4 mt-10 h-screen overflow-auto hide-scrollbar
     '>
       {
         video.map((item) => {

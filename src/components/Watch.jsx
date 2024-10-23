@@ -9,7 +9,6 @@ import { RiShareForwardLine } from "react-icons/ri";
 import { SlOptions } from "react-icons/sl";
 import { MdFileDownload } from "react-icons/md";
 
-
 const Watch = () => {
   const [channelDetails, setChannelDetails] = useState(null);
   const [singleVideo, setSingleVideo] = useState(null);
@@ -49,7 +48,7 @@ const Watch = () => {
   console.log(singleVideo);
 
   return (
-    <div className='flex mt-12 ml-4 w-[100%]'>
+    <div className='flex  mt-4 ml-4 w-[100%]'>
     <div className='flex  w-[88%]'>
     <div>
         <iframe

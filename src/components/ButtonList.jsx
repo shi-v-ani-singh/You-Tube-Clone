@@ -4,7 +4,7 @@ const buttonList = ['All', 'Javascript', 'Java','Programming','Java', 'Live', 'S
 
 const ButtonList = () => {
     return (
-        <div className='flex fixed bg-slate-50 gap-4 '>
+        <div className='flex  bg-slate-50 gap-4 '>
 
             {
                 buttonList.map((items, index) => {
