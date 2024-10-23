@@ -9,15 +9,6 @@ import { RiShareForwardLine } from "react-icons/ri";
 import { SlOptions } from "react-icons/sl";
 import { MdFileDownload } from "react-icons/md";
 
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { PiDotsThreeVertical } from "react-icons/pi";
-import { IoCloseOutline } from "react-icons/io5";
-
-
-
-
-
-
 
 const Watch = () => {
   const [channelDetails, setChannelDetails] = useState(null);
@@ -36,20 +27,6 @@ const Watch = () => {
 
   }
 
-  // const getSingleVideo = async () => {
-  //   try {
-  //     const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`);
-  //     const videoData = res?.data?.items[0];
-  //     setSingleVideo(videoData);
-  //     if (videoData) {
-  //       getChannelDetails(videoData?.snippet?.channelId);
-  //     }
-  //   }
-  //   catch (error) {
-
-  //     console.log(error);
-  //   }
-  // }
   useEffect(() => {
     const getSingleVideo = async () => {
       try {
@@ -67,10 +44,7 @@ const Watch = () => {
     getSingleVideo();
   }, [videoId]);
   
-  // useEffect(
-  //   () => {
-  //     getSingleVideo();
-  //   }, []);
+
 
   console.log(singleVideo);
 
@@ -128,24 +102,6 @@ const Watch = () => {
 
           </div>
         </div>
-      </div>
-      <div className='border rounded-md flex flex-col'>
-        <div className='border flex justify-between items-center'>
-          <div className='flex justify-between gap-3'>
-            <h1 className='font-medium'>Top Chat</h1>
-            <RiArrowDropDownLine size={24} />
-          </div>
-          <div className='flex justify-between hover:rounded-full hover:bg-gray-100 cursor-pointer p-3'>
-
-            <PiDotsThreeVertical size={24}/>
-
-            <IoCloseOutline size={24}/> 
-
-          </div>
-        </div>
-        {/* <div className='flex'>
-          chat
-        </div> */}
       </div>
     </div>
 

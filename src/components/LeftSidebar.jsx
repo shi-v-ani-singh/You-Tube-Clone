@@ -23,36 +23,6 @@ const sidebarItems = [
     icons: <MdVideoLibrary size={'24px'} />,
     title: 'You'
   },
-  {
-    icons: <GoHome size={'24px'} />,
-    title: 'Home'
-  },
-  {
-    icons: <SiYoutubeshorts size={'24px'} />,
-    title: 'Shorts'
-  },
-  {
-    icons: <MdOutlineSubscriptions size={'24px'} />,
-    title: 'Subscription'
-  },
-
-  {
-    icons: <MdVideoLibrary size={'24px'} />,
-    title: 'You'
-  },
-  {
-    icons: <GoHome size={'24px'} />,
-    title: 'Home'
-  },
-  {
-    icons: <SiYoutubeshorts size={'24px'} />,
-    title: 'Shorts'
-  },
-  {
-    icons: <MdOutlineSubscriptions size={'24px'} />,
-    title: 'Subscription'
-  },
-
 
 ]
 
@@ -62,8 +32,7 @@ const LeftSidebar = () => {
 
   return (
     <div className={`
-      flex flex-col items-start ml-1 gap-1 left-0 p-3 h-[calc(100vh-4.625rem)] mt-4 pt-0.5 overflow-y-scroll overflow-x-hidden ${open?"w-[20%]":"w[8%]"}
-    `}>
+      flex flex-col relative items-start ml-1 gap-1 left-0 p-3 h-[calc(100vh-10rem)] mt-4 pt-0.5  ${open?"w-[20%]":"w-[8%]"} z-10`}>
       {
         sidebarItems.map((item, index) => {
 
